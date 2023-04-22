@@ -1,6 +1,6 @@
 import "dotenv/config";
 import generatePasswordRepositories from "../repositories/generatePasswordRepositories";
-import generateRandomString from "utils/generateRandomString";
+import generateRandomString from "../utils/generateRandomString";
 
 async function createPassword(length: number): Promise<string> {
   if (length > 25 || length <= 0)
