@@ -5,7 +5,6 @@ async function createPassword(req: Request, res: Response): Promise<Response> {
   const { length } = req.body;
   try {
     const password = await generatePasswordService.createPassword(length);
-    console.log({ password })
     return res.status(201).send({ password });
   } catch (err: any) {
     return res.status(500).send(err.message);
