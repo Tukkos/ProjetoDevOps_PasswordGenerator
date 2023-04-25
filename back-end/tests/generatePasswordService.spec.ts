@@ -6,7 +6,7 @@ describe("POST /generate-password", () => {
     const body = { length: 12 };
     const result = await supertest(app).post("/generate-password").send(body);
 
-    expect(result.status).toEqual(500);
+    expect(result.status).toEqual(201);
   });
 
   it("should not generate a new password without the length", async () => {
